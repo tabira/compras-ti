@@ -1,12 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import 'antd/dist/antd.css';
+
+import './index.css';
+import { Provider } from 'react-redux';
+import { store} from './core/store';
+import DefaultLayout from './app/layouts/Default';
+
+
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+
+      <DefaultLayout>
+        <App/>
+      </DefaultLayout>
+
+
+    </Provider>
+   
+   
   </React.StrictMode>,
   document.getElementById('root')
 );
