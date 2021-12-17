@@ -7,21 +7,20 @@ import 'antd/dist/antd.css';
 
 import './index.css';
 import { Provider } from 'react-redux';
-import { store} from './core/store';
+import { store } from './core/store';
 import DefaultLayout from './app/layouts/Default';
 import AppRoutes from './app/routes';
-
-
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-
-      <DefaultLayout>
-        <AppRoutes/>
-      </DefaultLayout>
+      <BrowserRouter>
+        <DefaultLayout>
+          <AppRoutes />
+        </DefaultLayout>
+      </BrowserRouter>
     </Provider>
-   
   </React.StrictMode>,
   document.getElementById('root')
 );
