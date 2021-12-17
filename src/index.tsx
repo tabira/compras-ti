@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+
 import reportWebVitals from './reportWebVitals';
 
 import 'antd/dist/antd.css';
@@ -9,6 +9,7 @@ import './index.css';
 import { Provider } from 'react-redux';
 import { store} from './core/store';
 import DefaultLayout from './app/layouts/Default';
+import AppRoutes from './app/routes';
 
 
 
@@ -17,12 +18,9 @@ ReactDOM.render(
     <Provider store={store}>
 
       <DefaultLayout>
-        <App/>
+        <AppRoutes/>
       </DefaultLayout>
-
-
     </Provider>
-   
    
   </React.StrictMode>,
   document.getElementById('root')
